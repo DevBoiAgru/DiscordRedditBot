@@ -64,9 +64,17 @@ def getbestpost(subreddit, posts_lim, comments_lim):
     if isinstance(topcomment, praw.models.MoreComments):
       continue
     print("- " + topcomment.body)
-    embed.add_field(name=str("u/" + str(topcomment.author)), value=topcomment.body, inline=False)
 
-
+    # Prevent adding messages longer than max discord embed field length
+    if len(topcomment.body) < 1024:
+      embed.add_field(name=str("u/" + str(topcomment.author)),
+                    value=topcomment.body,
+                    inline=False)
+    else:
+      embed.add_field(name=str("u/" + str(topcomment.author)),
+                    value="*`comment too long to display`*",
+                    inline=False)
+        
   # Return the embed
   return embed
 
