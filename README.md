@@ -1,5 +1,6 @@
 # DiscordRedditBot
 Discord bot which replies with the hot post and top comments of a specified subreddit.
+(please keep in mind i made this bot in like 2 hours so dont expect everything to be perfect)
 
 # Prerequisites:
 You need to install PRAW and discord modules for python. It also uses urllib so you might need to install it if you get an error. <br>
