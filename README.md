@@ -19,7 +19,7 @@ You need to install PRAW and discord modules for python. It also uses urllib so 
 
 
 
-## Command syntax: /reddit ＜subreddit name＞
+## Command syntax: !reddit ＜subreddit name＞
 
 ## Useful links for getting started:
 Configuring PRAW: https://praw.readthedocs.io/en/stable/getting_started/quick_start.html <br>
